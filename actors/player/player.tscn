@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://74w21rwiy8ge"]
+
+[ext_resource type="Script" uid="uid://bdrhrenpe8ud0" path="res://actors/player/player.gd" id="1_qm0ti"]
+[ext_resource type="PackedScene" uid="uid://cwmbigwob6ajk" path="res://actors/player/bullet.tscn" id="2_ax26v"]
+[ext_resource type="Texture2D" uid="uid://bba8ghb4iej0m" path="res://icon.svg" id="2_fhbv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 8
+script = ExtResource("1_qm0ti")
+bullet_scene = ExtResource("2_ax26v")
+speed = 900
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fhbv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hqtel")

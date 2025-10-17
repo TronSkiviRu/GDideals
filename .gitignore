@@ -1,0 +1,26 @@
+# .gitignore для Godot 4
+
+# Бинарные файлы экспорта
+*.import
+
+# Кэш импорта
+.cache/
+
+# Настройки редактора (персональные)
+editor_data/
+
+# Логи и временные файлы  
+logs/
+tmp/
+
+# Файлы экспорта
+export/
+export_presets.cfg
+
+# Системные файлы
+.thumbs.db
+.DS_Store
+
+# Файлы IDE
+.vscode/
+.idea/
