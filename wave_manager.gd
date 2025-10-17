@@ -3,7 +3,6 @@ extends Node
 # даст скрипту имя класса, позволит создавать его экземпляры и 
 # обращаться к нему как к типу
 class_name WaveManager
-var t
 # словарь, хранит инфу об волнах
 var wave_configs = {
 	1: {"enemy_count": 5, "enemy_type": "basic", "enemy_rate": 1.0},
@@ -25,9 +24,7 @@ func get_wave_config(wave_number: int) -> Dictionary:
 	# все что выше 10 волны
 	return wave_configs[t]
 	
-func get_random_enemy_type(enemy_type_config)-> String:
-	if enemy_type_config is Array:
-		return enemy_type_config[randi() % enemy_type_config.size()]
-		
-	return enemy_type_config
+func get_random_enemy_type(enemy_type_config):
+	# есть идея лучше, вызывать несколько типов, а не 1 рандомный!
+	pass
 		
