@@ -1,4 +1,5 @@
 # .gitignore для Godot 4
+.godot
 
 # Бинарные файлы экспорта
 *.import
